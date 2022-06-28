@@ -50,7 +50,17 @@ int sommaElementiArray(int[] array)
 
 // Programma principale
 
-int[] array = { 2, 6, 7, 5, 3, 9 };
+//int[] array = { 2, 6, 7, 5, 3, 9 }; // array fornito nella consegna
+
+Console.Write($"\nInserisci la lunghezza dell'array: ");
+int arrayLength = Convert.ToInt32(Console.ReadLine());
+int[] array = new int[arrayLength];
+
+Console.WriteLine($"\nInserisci {arrayLength} numeri:");
+for(int i = 0; i < arrayLength; i++)
+{
+    array[i] = Convert.ToInt32(Console.ReadLine());
+}
 
 Console.WriteLine("\nArray originale:");
 StampaArray(array);
